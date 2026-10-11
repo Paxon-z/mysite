@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小批量钣金 · 切割代工（数控/激光切割 + 折弯，接小单、快报价）</title>
+<style>
+  :root { color-scheme: light; --ink:#263238; --steel:#37474F; --steel-d:#1E2A31; --accent:#607D8B; --soft:#ECEFF1; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; color:var(--ink); background:#fff; line-height:1.7; }
+  .wrap { max-width:720px; margin:0 auto; padding:0 22px; }
+
+  .hero { background:linear-gradient(160deg,#eceff1 0%,#dde4e8 55%,#ebeff1 100%); padding:64px 0 56px; position:relative; overflow:hidden; }
+  .hero::after { content:""; position:absolute; width:280px; height:280px; border-radius:50%; background:rgba(55,71,79,.12); top:-90px; right:-70px; }
+  .tag { display:inline-block; font-size:13px; letter-spacing:1px; color:var(--steel-d); background:rgba(55,71,79,.14); padding:5px 14px; border-radius:999px; margin-bottom:20px; }
+  h1 { font-size:34px; line-height:1.35; letter-spacing:.5px; font-weight:700; color:var(--ink); position:relative; z-index:1; }
+  h1 em { font-style:normal; color:var(--steel-d); }
+  .hero p { margin-top:16px; font-size:16px; color:#3d4c53; max-width:33em; position:relative; z-index:1; }
+  .cta { display:inline-block; margin-top:28px; background:var(--steel); color:#fff; font-size:16px; font-weight:600; letter-spacing:1px; padding:14px 34px; border-radius:12px; text-decoration:none; border:none; cursor:pointer; box-shadow:0 10px 22px rgba(38,50,56,.32); transition:transform .15s, box-shadow .2s; position:relative; z-index:1; }
+  .cta:hover { transform:translateY(-2px); box-shadow:0 14px 28px rgba(38,50,56,.42); }
+
+  section { padding:46px 0; }
+  h2 { font-size:22px; font-weight:700; margin-bottom:22px; color:var(--ink); }
+  h2 small { display:block; font-size:13px; font-weight:400; color:#8a97a0; letter-spacing:1px; margin-top:4px; }
+
+  .evi { display:grid; gap:14px; }
+  .evi div { background:var(--soft); border-radius:14px; padding:18px 20px; font-size:15px; color:#3a484f; }
+  .evi b { color:var(--steel-d); }
+
+  .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; text-align:center; }
+  .steps div { border:1.5px solid #dde4e7; border-radius:14px; padding:22px 12px; }
+  .steps .n { width:34px; height:34px; line-height:34px; border-radius:50%; background:var(--steel); color:#fff; font-weight:700; margin:0 auto 12px; font-size:15px; }
+  .steps strong { display:block; font-size:15px; margin-bottom:6px; }
+  .steps span { font-size:13px; color:#7f8c94; }
+
+  .price { background:var(--soft); border-radius:16px; padding:26px; text-align:center; }
+  .price .big { font-size:30px; font-weight:700; color:var(--steel-d); }
+  .price .row { display:flex; justify-content:center; gap:26px; margin-top:16px; flex-wrap:wrap; font-size:14px; color:#3a484f; }
+  .price .row div b { color:var(--steel-d); }
+
+  .promise { border-left:4px solid var(--accent); background:#eef2f4; padding:16px 20px; border-radius:0 12px 12px 0; font-size:15px; color:#39464d; }
+
+  footer { text-align:center; padding:40px 0 50px; font-size:13px; color:#9aa5ab; }
+  .btn-line { text-align:center; margin-top:8px; }
+  @media (max-width:520px){ h1{font-size:27px;} .steps{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="wrap">
+      <span class="tag">小批量钣金 · 切割代工</span>
+      <h1>几件也接，<br><em>发了图就报价。</em></h1>
+      <p>数控/激光切割、钣金折弯，小批量、非标件代工。<br>接得了小单、报得快、交得稳，不耽误你的项目。</p>
+      <button class="cta" onclick="go()">发图报价</button>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <h2>为什么需要"接小单"的加工<small>来自 27 位客户的真实调研</small></h2>
+      <div class="evi">
+        <div><b>85.2%</b> 的客户说：小批量、零散件找不到人做、大厂嫌单小不接。</div>
+        <div><b>74.1%</b> 的客户说：报价慢、周期长，耽误事。</div>
+        <div><b>66.7%</b> 的客户说：图纸、公差对接难，容易返工。</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <h2>三步，把小批量件做出来<small>发图 · 报价 · 加工交付</small></h2>
+      <div class="steps">
+        <div><div class="n">1</div><strong>发图</strong><span>发图纸/样品，说清材质与数量</span></div>
+        <div><div class="n">2</div><strong>报价</strong><span>按材料与工艺，快速给报价与交期</span></div>
+        <div><div class="n">3</div><strong>加工交付</strong><span>切割、折弯、加工，按约交货</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <h2>加工报价<small>按批（10 件以内）/ 打样 / 批量另议</small></h2>
+      <div class="price">
+        <div class="big">￥200 – ￥500 / 批</div>
+        <div class="row">
+          <div>打样 <b>200 元以内</b></div>
+          <div>小批量（≤10件） <b>200–500 元</b></div>
+          <div>批量/长期 <b>另议</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="promise">
+        <b>服务承诺：</b>小单也接（写明可接最小批量）；报价按材料与工艺说清、不虚高；交期按约、做废返工责任说清楚。图纸资料保密，不用于其他用途。
+      </div>
+      <div class="btn-line" style="margin-top:26px;">
+        <button class="cta" onclick="go()">发图报价 →</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>小批量钣金 · 切割代工 · 沈阳农业大学 AI+OPC 创业实践</footer>
+
+  <script>
+    function go(){
+      alert("收到！请把图纸/照片与数量发我。\n（演示页：正式使用时此处跳转到发图/报价表单 / 微信 / 群）");
+    }
+  </script>
+</body>
+</html>
